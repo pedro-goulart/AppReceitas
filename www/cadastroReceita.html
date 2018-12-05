@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/w3.css">
+        <title>Cadastro de Receitas</title>
+    </head>
+    <body>
+        
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+            <button id="btnFechaMenu" class="w3-bar-item w3-large">Close &times;</button>
+            <button id="btnReceitas" class="w3-bar-item w3-button">Receitas</button>
+            <button id="btnNovaReceita" class="w3-bar-item w3-button">Nova Receita</button>
+            <button id="btnSair" class="w3-bar-item w3-button">Sair</button>
+        </div>
+        <div class="w3-teal">
+            <button class="w3-button w3-teal w3-xlarge" id="btnAbreMenu">☰</button>
+        </div>
+        
+        <div class="w3-round w3-card">
+            <div class="w3-green w3-center"><label>App Receitas</label></div>
+            <div class="w3-container">
+                <input class="w3-input log" id="nome" placeholder="Nome da receita">
+                <label>Sumario</label>
+                <textarea class="w3-input log" id="sumario"></textarea>
+                <label>Ingredientes</label>
+                <textarea class="w3-input log" id="ingrediente"></textarea>
+                <label>Preparo</label>
+                <textarea class="w3-input log" id="preparo"></textarea>
+                <input class="w3-input log" id="rendimento" placeholder="Rendimento">
+                <input class="w3-input log" id="tempo" placeholder="Tempo">
+                <button class="w3-btn w3-green w3-right log" id="btnSubmeter">Cadastar</button> 
+                <button class="w3-btn w3-green w3-right log" id="btnCancelar">Cancelar</button>
+            </div>
+        </div>
+        
+        <button id="teste">cadreceita</button>
+        
+        <script type="text/javascript" src="js/cadastroreceita.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+    </body>
+
+</html>

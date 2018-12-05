@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function main(){
-    //função main
+    //função main   https://pedrogoulartm.000webhostapp.com/receita/
 }
 
 function clickLogin(element){
@@ -43,17 +43,17 @@ function clickLogin(element){
     var json = 'dados='+JSON.stringify({tipoReq:'login',usuario:usu,senha:senha});
     
     var http = new XMLHttpRequest();
-    http.open('POST', 'http://localhost/ServiceReceitas/serviceLogin.php', true);
+    http.open('POST', "https://pedrogoulartm.000webhostapp.com/receita/serviceLogin.php", true);
 
     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
-            
-            var ww = this.responseText;
-            
-            if (ww.permitido == 's'){
-                window.localStorage.setItem("usuario",asdf.dados_resposta.usuario);
+            //alert(this.responseText);
+            var ww = JSON.parse(this.responseText);
+            //alert(ww.dados_resposta.permitido);
+            if (ww.dados_resposta.permitido == 's'){
+                window.localStorage.setItem("usuario",JSON.stringify(ww.dados_resposta.usuario));
                 window.location = "home.html";
             }else{
                 alert('senha ou usuario invalido');

@@ -3,5 +3,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function clickTest(element){
-    alert(window.localStorage.getItem("usuario"));
+    alert(JSON.parse(window.localStorage.getItem("usuario")).usuario);
 }
